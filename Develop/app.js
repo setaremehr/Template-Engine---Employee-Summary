@@ -12,7 +12,7 @@ let employees = [];
 async function addManager() {
     const data = await inquirer.prompt([
         {
-         type: 'input',
+            type: 'input',
             message: "what is the manager's name?",
             name: 'name'
         },
@@ -34,15 +34,15 @@ async function addManager() {
     ]);
 
 
-   
-            const name = data.name
-            const email = data.email
-            const id = data.id
-            const officeNumber = data.officeNumber
-            const newManager = new Manager(name, id, email, officeNumber)
-            employees.push(newManager)
-            addMembers();
-       
+
+    const name = data.name
+    const email = data.email
+    const id = data.id
+    const officeNumber = data.officeNumber
+    const newManager = new Manager(name, id, email, officeNumber)
+    employees.push(newManager)
+    addMembers();
+
 }
 
 async function addEngineer() {
@@ -68,16 +68,16 @@ async function addEngineer() {
             name: "github"
         }
     ])
-        // .then(data => {
-            console.log(data);
-            const name = data.name
-            const id = data.id
-            const email = data.email
-            const github = data.github
-            const newEngineer = new Engineer(name, id, email, github)
-            employees.push(newEngineer)
-            addMembers();
-        // });
+    
+    console.log(data);
+    const name = data.name
+    const id = data.id
+    const email = data.email
+    const github = data.github
+    const newEngineer = new Engineer(name, id, email, github)
+    employees.push(newEngineer)
+    addMembers();
+  
 }
 
 function addIntern() {
@@ -119,7 +119,7 @@ async function addMembers() {
     const data = await inquirer.prompt([
         {
             type: 'list',
-            message: 'Would you like to add more team members?',
+            message: 'Would you like to add team members?',
             choices: [
                 "Yes, add a manager",
                 "Yes, add an engineer",
@@ -129,43 +129,39 @@ async function addMembers() {
             name: "addMoreMember"
         }
     ])
-        // .then(data => {
-            switch (data.addMoreMember) {
-                case 'Yes, add an engineer':
-                    addEngineer();
-                    break;
 
-                    case 'Yes, add a manager':
-                        addManager();
-                        break;
+    switch (data.addMoreMember) {
+        case 'Yes, add an engineer':
+            addEngineer();
+            break;
 
-                case ('Yes, add an intern'):
-                    addIntern();
-                    break;
+        case 'Yes, add a manager':
+            addManager();
+            break;
 
-                case ('No, it is already completed'):
-                    console.log("i am here");
-                    writehtml();
-                    break;
-            }
-        // });
-       
+        case ('Yes, add an intern'):
+            addIntern();
+            break;
+
+        case ('No, it is already completed'):
+            console.log("i am here");
+            writehtml();
+            break;
+    }
+
+
 }
 // addManager();
 addMembers();
 
-     function writehtml (){
-        console.log("say somthing");
-        console.log(employees);
-//         fs.writeFile('./finalHtml/final.html', 'utf8', function(err){
-//     if (err) {
-//         throw new Error(err);
-//       }
-// });
-const $html = htmlRenderer(employees);
-console.log($html);
-fs.writeFileSync(path.join("finalhtml","final.html"),$html);
-     }
+function writehtml() {
+    console.log("say somthing");
+    console.log(employees);
+    
+    const $html = htmlRenderer(employees);
+   
+    fs.writeFileSync(path.join("finalhtml", "final.html"), $html);
+}
 
 
 
