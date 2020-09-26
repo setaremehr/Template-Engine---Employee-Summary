@@ -7,9 +7,13 @@
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
+* 
+
+### githubRepo:
+https://github.com/setaremehr/teamGenerator.git
 
 ## Sample HTML Output
-
+![](https://user-images.githubusercontent.com/66357101/94330093-b91a8180-ff75-11ea-9c79-127ea6c56723.png)
 
 ## Demo
 ![ezgif com-video-to-gif](https://user-images.githubusercontent.com/66357101/94328922-68059000-ff6b-11ea-8757-b977954095dc.gif)
@@ -24,7 +28,7 @@
 
 ## Tests
 * npm test
-
+![](https://user-images.githubusercontent.com/66357101/94330159-99378d80-ff76-11ea-95df-4e381bec05ab.png)
 ## Questions
 * If you have any questions you can contact me here: setaremehr89@gmail.com
 
