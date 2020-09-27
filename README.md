@@ -22,7 +22,7 @@ https://github.com/setaremehr/teamGenerator.git
 
 ## Description
 * this is a team generator command line application.  
-* you are able to create your own team page with employee data from a CLI.
+* you are able to create your own team page with employee data .
 
 ## Installation
 * To install dependencies, run the following command: npm instal
