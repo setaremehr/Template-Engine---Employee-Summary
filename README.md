@@ -13,6 +13,8 @@
 https://github.com/setaremehr/teamGenerator.git
 
 ## Sample HTML Output
+
+![ezgif com-video-to-gif-4](https://user-images.githubusercontent.com/66357101/94355526-99e52800-0039-11eb-9d03-d57b76bf39d6.gif)
 ![](https://user-images.githubusercontent.com/66357101/94330093-b91a8180-ff75-11ea-9c79-127ea6c56723.png)
 
 ## Demo
